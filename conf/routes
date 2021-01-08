@@ -11,5 +11,7 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 
 GET     /play/:name                 controllers.HelloController.hello(name)
 
-GET     /survey                  controllers.SurveyController.survey
+GET     /survey                     controllers.SurveyController.survey
+
+GET     /review                     controllers.ReviewController.review
 
