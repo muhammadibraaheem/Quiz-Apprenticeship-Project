@@ -15,3 +15,5 @@ GET     /survey                     controllers.SurveyController.survey
 
 GET     /review                     controllers.ReviewController.review
 
+GET     /apicall                    controllers.ApiController.apiCall
+
