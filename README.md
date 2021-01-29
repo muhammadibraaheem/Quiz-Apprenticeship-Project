@@ -1,4 +1,4 @@
 # play-project
 
 
-Next: DELETE API
+Next: send request body 

@@ -19,4 +19,6 @@ GET     /apicall                    controllers.ApiController.getApiCall
 
 POST    /apicall                    controllers.ApiController.postApiCall
 
-PUT    /apicall                     controllers.ApiController.putApiCall
+PUT     /apicall                     controllers.ApiController.putApiCall
+
+DELETE  /apicall                  controllers.ApiController.deleteApiCall
