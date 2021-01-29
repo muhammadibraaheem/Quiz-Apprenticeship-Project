@@ -17,4 +17,6 @@ GET     /review                     controllers.ReviewController.review
 
 GET     /apicall                    controllers.ApiController.getApiCall
 
-POST    /apicall                 controllers.ApiController.postApiCall
+POST    /apicall                    controllers.ApiController.postApiCall
+
+PUT    /apicall                     controllers.ApiController.putApiCall

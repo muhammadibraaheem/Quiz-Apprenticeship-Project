@@ -1,4 +1,4 @@
 # play-project
 
 
-Next: POST API
+Next: DELETE API

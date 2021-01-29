@@ -15,4 +15,9 @@ class ApiController @Inject()(val controllerComponents: ControllerComponents) ex
     val json: JsValue = Json.parse("""{"hello":"post"}""")
     Ok(json)
   }
+
+  def putApiCall: Action[AnyContent] = Action { implicit request =>
+    val json: JsValue = Json.parse("""{"hello":"put"}""")
+    Ok(json)
+  }
 }
