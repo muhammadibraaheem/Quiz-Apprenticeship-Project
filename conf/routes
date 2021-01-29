@@ -15,5 +15,10 @@ GET     /survey                     controllers.SurveyController.survey
 
 GET     /review                     controllers.ReviewController.review
 
-GET     /apicall                    controllers.ApiController.apiCall
+GET     /apicall                    controllers.ApiController.getApiCall
 
+POST    /apicall                    controllers.ApiController.postApiCall
+
+PUT     /apicall                     controllers.ApiController.putApiCall
+
+DELETE  /apicall                  controllers.ApiController.deleteApiCall
