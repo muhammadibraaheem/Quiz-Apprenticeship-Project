@@ -15,7 +15,7 @@ GET     /survey                     controllers.SurveyController.survey
 
 GET     /review                     controllers.ReviewController.review
 
-GET     /apicall                    controllers.ApiController.getApiCall
+GET     /apicall/:colour             controllers.ApiController.getApiCall(colour)
 
 POST    /apicall                    controllers.ApiController.postApiCall
 
