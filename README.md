@@ -1,4 +1,4 @@
 # play-project
 
 
-Next: send request body 
+Next: handling optional parameters
