@@ -6,8 +6,9 @@ import play.api.libs.json._
 
 class ApiController @Inject()(val controllerComponents: ControllerComponents) extends BaseController {
 
-  def getApiCall(colour: String): Action[AnyContent] = Action { implicit request =>
-    val json: JsValue = Json.parse(s"""{"hello":"get", "colour": "$colour"}""")
+  def getApiCall(colour: String, shade: Option[String]): Action[AnyContent] = Action { implicit request =>
+    val shadeValue = shade.getOrElse("")
+    val json: JsValue = Json.parse(s"""{"hello":"get", "colour": "$colour", "shade": "$shadeValue"}""")
     Ok(json)
   }
 
