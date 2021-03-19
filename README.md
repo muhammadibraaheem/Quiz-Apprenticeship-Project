@@ -1,4 +1,4 @@
 # play-project
 
 
-Next: handling optional parameters for post 
+Next: calling the API using play ws

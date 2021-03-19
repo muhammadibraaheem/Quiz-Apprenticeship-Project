@@ -15,8 +15,9 @@ class ApiController @Inject()(val controllerComponents: ControllerComponents) ex
   }
 
   def postApiCall: Action[AnyContent] = Action { implicit request =>
-    val colourValue = request.body.asJson.map{json => (json \ s"$paramColour").as[String]}.getOrElse("")
-    val shadeValue = request.body.asJson.map{json => (json \ s"$paramShade").asOpt[String].getOrElse("")}.getOrElse("")
+    val jsonBody = request.body.asJson
+    val colourValue = jsonBody.map{json => (json \ s"$paramColour").as[String]}.getOrElse("")
+    val shadeValue = jsonBody.map{json => (json \ s"$paramShade").asOpt[String].getOrElse("")}.getOrElse("")
     val json: JsValue = Json.parse(s"""{"hello":"post", "$paramColour":"$colourValue", "$paramShade":"$shadeValue"}""")
     Ok(json)
   }
