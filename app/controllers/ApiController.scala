@@ -6,16 +6,18 @@ import play.api.libs.json._
 
 class ApiController @Inject()(val controllerComponents: ControllerComponents) extends BaseController {
 
+  val paramColour = "colour"
+  val paramShade = "shade"
+
   def getApiCall(colour: String, shade: Option[String]): Action[AnyContent] = Action { implicit request =>
-    val shadeValue = shade.getOrElse("")
-    val json: JsValue = Json.parse(s"""{"hello":"get", "colour": "$colour", "shade": "$shadeValue"}""")
+    val json: JsValue = Json.parse(s"""{"hello":"get", "$paramColour": "$colour", "$paramShade": "${shade.getOrElse("")}"}""")
     Ok(json)
   }
 
   def postApiCall: Action[AnyContent] = Action { implicit request =>
-    val paramName = "colour"
-    val paramValue = request.body.asJson.map{json => (json \ s"$paramName").as[String]}.getOrElse("")
-    val json: JsValue = Json.parse(s"""{"hello":"post", "$paramName":"$paramValue"}""")
+    val colourValue = request.body.asJson.map{json => (json \ s"$paramColour").as[String]}.getOrElse("")
+    val shadeValue = request.body.asJson.map{json => (json \ s"$paramShade").asOpt[String].getOrElse("")}.getOrElse("")
+    val json: JsValue = Json.parse(s"""{"hello":"post", "$paramColour":"$colourValue", "$paramShade":"$shadeValue"}""")
     Ok(json)
   }
 
