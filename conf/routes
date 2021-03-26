@@ -15,10 +15,14 @@ GET     /survey                     controllers.SurveyController.survey
 
 GET     /review                     controllers.ReviewController.review
 
-GET     /apicall/:colour             controllers.ApiController.getApiCall(colour, shade: Option[String])
+GET     /apicall/:colour            controllers.ApiController.getApiCall(colour, shade: Option[String])
 
 POST    /apicall                    controllers.ApiController.postApiCall
 
-PUT     /apicall                     controllers.ApiController.putApiCall
+PUT     /apicall                    controllers.ApiController.putApiCall
 
-DELETE  /apicall                  controllers.ApiController.deleteApiCall
+DELETE  /apicall                    controllers.ApiController.deleteApiCall
+
+GET     /webpage                     controllers.WebController.displayPage
+
+GET    /submit                     controllers.WebController.submitPage
