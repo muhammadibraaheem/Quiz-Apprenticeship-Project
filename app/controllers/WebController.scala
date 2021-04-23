@@ -24,12 +24,12 @@ class WebController @Inject() (ws: WSClient, val controllerComponents: Controlle
 
   def displayPage() = Action { implicit request: Request[AnyContent] =>
     callApi()
-    Ok(views.html.web_page())
+    Ok(views.html.web_page("to do"))
 
   }
 
   def submitPage() = Action { implicit request: Request[AnyContent] =>
-    Ok(views.html.web_page())
+    Ok(views.html.web_page("to do"))
   }
 
 
