@@ -1,9 +1,11 @@
+@(defaultColour: String)
+
 @main("Web Page"){
 
 <h1>Web Page</h1>
 <form action="/submit">
     <label for="colourbox">Colour</label><br>
-    <input type="text" id="colour" name="colour">
+    <input type="text" id="colour" name="colour" value="@defaultColour">
     <br><br>
 
     <label for="shadebox">Shade</label><br>
