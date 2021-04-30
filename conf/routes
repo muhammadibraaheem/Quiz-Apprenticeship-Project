@@ -23,6 +23,6 @@ PUT     /apicall                    controllers.ApiController.putApiCall
 
 DELETE  /apicall                    controllers.ApiController.deleteApiCall
 
-GET     /webpage                     controllers.WebController.displayPage
+GET     /webpage                    controllers.WebController.displayPage
 
 GET    /submit                     controllers.WebController.submitPage
