@@ -14,7 +14,7 @@ class ApiConnector  @Inject() (ws: WSClient) {
     ws.url(url).get().map { response =>
       (response.json \ "colour").as[String]
     }
-    println(url)
+
   }
 
   def callPostApi(colour: String, shade: String)= {
