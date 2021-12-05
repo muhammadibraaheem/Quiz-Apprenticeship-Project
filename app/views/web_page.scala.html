@@ -1,15 +1,15 @@
-@(defaultColour: String)
+@(defaultUsername: String)
 
-@main("Web Page"){
+@main("Welcome To The Capital City Quiz"){
 
-<h1>Web Page</h1>
+<h1>Welcome To The Capital City Quiz</h1>
 <form action="/submit">
-    <label for="colourbox">Colour</label><br>
-    <input type="text" id="colour" name="colour" value="@defaultColour">
+    <label for="userbox">Username</label><br>
+    <input type="text" id="username" name="username" value="@defaultUsername">
     <br><br>
 
-    <label for="shadebox">Shade</label><br>
-    <input type="text" id="shade" name="shade">
+    <label for="passwordbox">Password</label><br>
+    <input type="text" id="password" name="password">
     <br><br>
 
     <input type="submit" value="Submit">
