@@ -1,6 +1,6 @@
-# play-project
+# Quiz Apprenticeship Project
 
+Displaying my talent through a quiz to finalise my apprenticeship
 
-Next: Display response of api call on the screen
- 
-Later: web page with post method
+hence Quiz Apprenticeship Project :))
+
