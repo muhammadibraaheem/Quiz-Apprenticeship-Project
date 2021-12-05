@@ -9,20 +9,12 @@ GET     /                           controllers.HomeController.index
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
-GET     /play/:name                 controllers.HelloController.hello(name)
-
-GET     /survey                     controllers.SurveyController.survey
-
 GET     /review                     controllers.ReviewController.review
 
 GET     /apicall/:colour            controllers.ApiController.getApiCall(colour, shade: Option[String])
 
 POST    /apicall                    controllers.ApiController.postApiCall
 
-PUT     /apicall                    controllers.ApiController.putApiCall
-
-DELETE  /apicall                    controllers.ApiController.deleteApiCall
-
 GET     /webpage                    controllers.WebController.displayPage
 
-GET    /submit                     controllers.WebController.submitPage
+GET     /submit                     controllers.WebController.submitPage
